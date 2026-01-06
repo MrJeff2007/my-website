@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Happy Valentine’s Day My Love❤️</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- MENU -->
+  <nav class="menu">
+    <button onclick="showPage('home')">Home 💖</button>
+    <button onclick="showPage('reasons')">Why I Love You 💌</button>
+    <button onclick="showPage('memories')">Our Memories 📸</button>
+  </nav>
+
+  <div class="container">
+
+    <!-- HOME PAGE -->
+    <section id="home" class="page">
+      <h1>Happy Valentine’s Day 💖</h1>
+      <p class="subtitle">To the most amazing girlfriend in the world</p>
+
+      <div class="card">
+        <h2>Will You Be My Valentine? 🌹</h2>
+        <div class="buttons">
+          <button onclick="yesClicked()">Yes 💕</button>
+          <button id="noBtn">No 🙈</button>
+        </div>
+        <p id="answer"></p>
+      </div>
+    </section>
+
+    <!-- REASONS PAGE -->
+    <section id="reasons" class="page hidden">
+      <div class="card">
+        <h2>Why I Love You 💌</h2>
+        <p id="reason">Click the button to see why ❤️</p>
+        <button onclick="showReason()">Show Reason</button>
+      </div>
+    </section>
+
+    <!-- MEMORIES PAGE -->
+    <section id="memories" class="page hidden">
+      <div class="card">
+        <h2>Our Memories 📸</h2>
+        <input type="file" id="photoInput" accept="image/*" multiple>
+        <div id="gallery"></div>
+      </div>
+    </section>
+
+  </div>
+
+  <!-- LIGHTBOX -->
+  <div id="lightbox">
+    <span id="closeLightbox">&times;</span>
+    <img id="lightboxImg">
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
