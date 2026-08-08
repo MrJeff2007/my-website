@@ -1,0 +1,14 @@
+{
+  "name": "Jadefall — Echoes of the Veiled Moon",
+  "short_name": "Jadefall",
+  "description": "A mobile wuxia-inspired open-world RPG adventure.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "landscape",
+  "background_color": "#071016",
+  "theme_color": "#071016",
+  "icons": [
+    {"src":"icon.svg","sizes":"any","type":"image/svg+xml","purpose":"any maskable"}
+  ]
+}
