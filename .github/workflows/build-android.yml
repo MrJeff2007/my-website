@@ -26,6 +26,11 @@ jobs:
       - name: Install Android platform/build tools
         run: sdkmanager "platforms;android-35" "build-tools;35.0.0"
 
+      - name: Bundle Three.js locally
+        run: |
+          mkdir -p android/app/src/main/assets/www
+          curl -L "https://cdn.jsdelivr.net/npm/three@0.178.0/build/three.module.js" -o android/app/src/main/assets/www/three.module.js
+
       - name: Set up Gradle
         uses: gradle/actions/setup-gradle@v4
         with:
