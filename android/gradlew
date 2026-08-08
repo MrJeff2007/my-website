@@ -1,0 +1,13 @@
+#!/usr/bin/env sh
+set -eu
+
+# Run from the Android project directory so the build matches the workflow.
+cd "$(dirname "$0")"
+
+if command -v gradle >/dev/null 2>&1; then
+  exec gradle "$@"
+fi
+
+echo "gradle is not installed on this runner." >&2
+echo "Install Gradle or add the standard Gradle wrapper files under android/gradle/wrapper/." >&2
+exit 127
